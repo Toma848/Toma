@@ -1,8 +1,7 @@
-// JS for interactive gallery popup (basic lightbox)
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".gallery img");
 
-  images.forEach(img => {
+  images.forEach((img) => {
     img.addEventListener("click", () => {
       const overlay = document.createElement("div");
       overlay.style.position = "fixed";
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       enlargedImg.style.maxWidth = "90%";
       enlargedImg.style.maxHeight = "90%";
       enlargedImg.style.borderRadius = "10px";
+      enlargedImg.style.boxShadow = "0 0 15px rgba(255,255,255,0.3)";
 
       overlay.appendChild(enlargedImg);
 
